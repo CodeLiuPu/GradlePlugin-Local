@@ -22,7 +22,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: uri('../repo'))
-            pom.groupId = "com.update.study.gradle.plugin"
+            pom.groupId = "com.update.liu.gradle.plugin"
             pom.artifactId = "trace"
             pom.version = '1.0.0'
         }

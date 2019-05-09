@@ -1,4 +1,4 @@
-package com.update.study.gradle.plugin;
+package com.update.plugin.trace;
 
 /**
  * @author : liupu

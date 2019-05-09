@@ -1,4 +1,4 @@
-package com.update.study.gradle.plugin
+package com.update.plugin.hello
 
 
 import org.gradle.api.Plugin
