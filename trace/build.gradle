@@ -15,13 +15,14 @@ repositories {
 
 
 // 发布maven
-group="com.update.study.gradle.plugin"
-version='1.0.0'
 
 uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: uri('../repo'))
+            pom.groupId = "com.update.study.gradle.plugin"
+            pom.artifactId = "trace"
+            pom.version = '1.0.0'
         }
     }
 }
