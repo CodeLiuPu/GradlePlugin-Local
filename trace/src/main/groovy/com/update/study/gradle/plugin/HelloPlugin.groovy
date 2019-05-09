@@ -12,5 +12,4 @@ class HelloPlugin implements Plugin<Project> {
             println "Hello Gradle"
         }
     }
-
 }
