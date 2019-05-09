@@ -15,7 +15,7 @@ class TracePlugin extends Transform implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
-        def android = project.extensions.getByType(AppExtension);
+        def android = project.extensions.getByType(AppExtension)
         android.registerTransform(this)
     }
 
