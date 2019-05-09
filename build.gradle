@@ -10,13 +10,10 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
-        classpath 'com.update.hello:hello:1.0.0'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.update.study.gradle.plugin:trace:1.0.0'
     }
 }
-apply plugin: 'com.update.helloplugin'
+apply plugin: 'com.update.study.gradle.plugin'
 
 allprojects {
     repositories {

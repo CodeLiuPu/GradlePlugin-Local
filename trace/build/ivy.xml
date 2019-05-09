@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info organisation="com.update.hello" module="hello" revision="1.0.0" status="integration" publication="20190508232005"/>
+  <info organisation="com.update.study.gradle.plugin" module="trace" revision="1.0.0" status="integration" publication="20190509111212"/>
   <configurations>
     <conf name="apiElements" visibility="private" extends="runtime"/>
     <conf name="archives" visibility="public"/>
@@ -22,7 +22,7 @@
     <conf name="testRuntimeOnly" visibility="private" extends="runtimeOnly"/>
   </configurations>
   <publications>
-    <artifact name="hello" type="jar" ext="jar" conf="apiElements,archives,runtime,runtimeElements"/>
+    <artifact name="trace" type="jar" ext="jar" conf="apiElements,archives,runtime,runtimeElements"/>
   </publications>
   <dependencies>
     <dependency org="com.android.tools.build" name="gradle" rev="3.1.4" conf="compile-&gt;default"/>

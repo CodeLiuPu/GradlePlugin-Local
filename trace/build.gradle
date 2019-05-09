@@ -15,7 +15,7 @@ repositories {
 
 
 // 发布maven
-group="com.update.hello"
+group="com.update.study.gradle.plugin"
 version='1.0.0'
 
 uploadArchives {
