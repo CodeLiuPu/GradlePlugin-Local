@@ -12,7 +12,7 @@ public class TraceMethodVisitor extends AdviceAdapter {
     }
 
     /**
-     * 方法开始之前回调
+     * Enter zhe Method
      */
     @Override
     protected void onMethodEnter() {
@@ -26,9 +26,7 @@ public class TraceMethodVisitor extends AdviceAdapter {
     }
 
     /**
-     * 方法结束时回调
-     *
-     * @param i
+     * end of Method
      */
     @Override
     protected void onMethodExit(int i) {

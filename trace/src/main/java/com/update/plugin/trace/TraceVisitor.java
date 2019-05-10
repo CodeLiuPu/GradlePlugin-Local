@@ -20,7 +20,7 @@ public class TraceVisitor extends ClassVisitor {
     }
 
     /**
-     * 当ASM进入类时回调
+     * ASM income Class
      */
     @Override
     public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
@@ -32,7 +32,7 @@ public class TraceVisitor extends ClassVisitor {
     }
 
     /**
-     * ASM进入到类的方法时进行回调
+     * ASM income Method
      */
     @Override
     public MethodVisitor visitMethod(final int access, final String name, final String desc, final String signature,
@@ -40,18 +40,14 @@ public class TraceVisitor extends ClassVisitor {
         MethodVisitor methodVisitor = cv.visitMethod(access, name, desc, signature, exceptions);
 
         if (shouldInject()) {
+            methodVisitor = new TraceMethodVisitor(Opcodes.ASM5, methodVisitor, access, name, desc);
             return methodVisitor;
         } else {
-            methodVisitor = new TraceMethodVisitor(Opcodes.ASM5, methodVisitor, access, name, desc);
             return methodVisitor;
         }
     }
 
-    /**
-     * 判断是否是需要注入代码的类
-     */
     private boolean shouldInject() {
-        //如果父类名是AppCompatActivity则拦截这个方法
         return superName.contains("BaseActivity");
     }
 
