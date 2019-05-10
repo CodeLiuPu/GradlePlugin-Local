@@ -9,13 +9,13 @@ import org.objectweb.asm.Opcodes;
  * date   : 2019/5/9
  * desc   :
  */
-public class TraceClassVisitor extends ClassVisitor {
+public class TraceVisitor extends ClassVisitor {
 
     private String className;
     private String superName;
     private String[] interfaces;
 
-    public TraceClassVisitor(String className, ClassVisitor classVisitor) {
+    public TraceVisitor(String className, ClassVisitor classVisitor) {
         super(Opcodes.ASM5, classVisitor);
     }
 
@@ -52,7 +52,7 @@ public class TraceClassVisitor extends ClassVisitor {
      */
     private boolean shouldInject() {
         //如果父类名是AppCompatActivity则拦截这个方法
-        return superName.contains("AppCompatActivity");
+        return superName.contains("BaseActivity");
     }
 
 }
