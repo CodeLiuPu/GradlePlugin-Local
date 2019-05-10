@@ -55,5 +55,4 @@ public class TraceClassVisitor extends ClassVisitor {
         return superName.contains("AppCompatActivity");
     }
 
-
 }
